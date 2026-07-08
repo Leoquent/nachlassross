@@ -43,9 +43,12 @@ nav.scrolled{background:rgba(251,252,253,.94);backdrop-filter:blur(12px);box-sha
 nav.scrolled .logo{color:var(--navy)}
 .logo b{color:var(--gold);font-weight:600}
 .logo-icon{height:48px;width:auto;transition:filter .35s;display:block}
+.logo-divider{width:1px;height:48px;background-color:var(--white);margin:0 4px;transition:background-color .35s,height .35s}
 .logo-text{height:44px;width:auto;transition:filter .35s;display:block}
+nav.scrolled .logo-divider{background-color:var(--navy)}
 nav:not(.scrolled) .logo-icon,nav:not(.scrolled) .logo-text{filter:brightness(0) invert(1)}
 nav.menu-open .logo-icon,nav.menu-open .logo-text{filter:brightness(0) invert(1)!important}
+nav.menu-open .logo-divider{background-color:var(--white)!important}
 .nav-links{display:flex;gap:32px;align-items:center}
 .nav-links a{font-size:.9rem;color:rgba(255,255,255,.85);transition:color .25s;font-weight:500}
 nav.scrolled .nav-links a{color:var(--muted)}
@@ -180,8 +183,9 @@ nav.scrolled .burger span{background:var(--navy)}
 footer{background:#0a1727;color:rgba(255,255,255,.55);padding:36px 0;font-size:.85rem}
 footer .container{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
 footer .logo{font-size:1.05rem}
-footer .logo{display:inline-flex;align-items:center;gap:8px}
+footer .logo{display:inline-flex;align-items:center;gap:12px}
 footer .logo-icon{height:48px;width:auto;filter:brightness(0) invert(1)}
+footer .logo-divider{width:1px;height:48px;background-color:rgba(255,255,255,0.15);margin:0 4px}
 footer .logo-text{height:44px;width:auto;filter:brightness(0) invert(1)}
 
 /* ---------- Reveal ---------- */
@@ -222,6 +226,7 @@ footer .logo-text{height:44px;width:auto;filter:brightness(0) invert(1)}
   <div class="container nav-inner">
     <a href="#top" class="logo">
       <img src="logo_icon.png" alt="Gebrüder Ross Logo" class="logo-icon">
+      <span class="logo-divider"></span>
       <img src="logo_text.png" alt="Gebrüder Ross" class="logo-text">
     </a>
     <button class="burger" id="burger" aria-label="Menü"><span></span><span></span><span></span></button>
@@ -444,6 +449,7 @@ footer .logo-text{height:44px;width:auto;filter:brightness(0) invert(1)}
   <div class="container">
     <span class="logo">
       <img src="logo_icon.png" alt="Gebrüder Ross Logo" class="logo-icon">
+      <span class="logo-divider"></span>
       <img src="logo_text.png" alt="Gebrüder Ross" class="logo-text">
     </span>
     <span>Kriegsbergstraße 30 · 70174 Stuttgart</span>
