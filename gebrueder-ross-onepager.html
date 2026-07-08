@@ -87,8 +87,8 @@ nav.scrolled .burger span{background:var(--navy)}
 
 /* ---------- Trust bar ---------- */
 .trustbar{background:var(--white);border-bottom:1px solid var(--line);padding:26px 0}
-.trustbar .container{display:flex;justify-content:center;gap:14px 56px;flex-wrap:wrap;color:var(--muted);font-size:.88rem;letter-spacing:.06em;text-transform:uppercase}
-.trustbar span{display:flex;align-items:center;gap:10px}
+.trustbar .container{display:flex;justify-content:center;gap:16px 48px;flex-wrap:wrap;color:var(--muted);font-size:.88rem;letter-spacing:.06em;text-transform:uppercase}
+.trustbar span{display:flex;align-items:center;gap:10px;white-space:nowrap}
 .trustbar svg{width:16px;height:16px;stroke:var(--gold)}
 
 /* ---------- Value props ---------- */
@@ -196,6 +196,7 @@ footer .logo-text{height:32px;width:auto;filter:brightness(0) invert(1)}
   .sticky-side{position:static}
   .about-badge{right:8px}
   .portrait-frame{aspect-ratio:3/2}
+  .trustbar .container{display:grid;grid-template-columns:repeat(2,max-content);justify-content:center;gap:16px 48px}
 }
 @media(max-width:640px){
   section{padding:64px 0}
@@ -211,6 +212,7 @@ footer .logo-text{height:32px;width:auto;filter:brightness(0) invert(1)}
   .hero-stats{gap:28px;flex-wrap:wrap}
   .addons{padding:40px 28px}
   .contact-card{padding:32px 24px}
+  .trustbar .container{display:flex;flex-direction:column;align-items:center;gap:14px}
 }
 </style>
 </head>
