@@ -483,8 +483,22 @@ const nav=document.getElementById('nav');
 addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
 // Mobile menu
 const burger=document.getElementById('burger'),links=document.getElementById('navLinks');
-burger.addEventListener('click',()=>{links.classList.toggle('open');nav.classList.toggle('menu-open')});
-links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');nav.classList.remove('menu-open')}));
+let menuTimeout;
+burger.addEventListener('click',()=>{
+  clearTimeout(menuTimeout);
+  if(links.classList.contains('open')){
+    links.classList.remove('open');
+    menuTimeout=setTimeout(()=>nav.classList.remove('menu-open'),350);
+  }else{
+    nav.classList.add('menu-open');
+    links.classList.add('open');
+  }
+});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  clearTimeout(menuTimeout);
+  links.classList.remove('open');
+  menuTimeout=setTimeout(()=>nav.classList.remove('menu-open'),350);
+}));
 // Scroll reveal
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
