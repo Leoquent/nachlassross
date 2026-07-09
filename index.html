@@ -483,8 +483,30 @@ const nav=document.getElementById('nav');
 addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
 // Mobile menu
 const burger=document.getElementById('burger'),links=document.getElementById('navLinks');
-burger.addEventListener('click',()=>{links.classList.toggle('open');nav.classList.toggle('menu-open')});
-links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');nav.classList.remove('menu-open')}));
+let menuCloseTimer;
+function closeMenu(){
+  clearTimeout(menuCloseTimer);
+  links.classList.remove('open');
+  // Wait for the slide-out transition (350ms) to finish,
+  // then snap the nav background instantly so no colour bleed shows.
+  menuCloseTimer=setTimeout(()=>{
+    nav.style.transition='none';
+    nav.classList.remove('menu-open');
+    // Force a reflow so the browser applies the snap before re-enabling transitions
+    nav.offsetHeight;
+    nav.style.transition='';
+  },350);
+}
+burger.addEventListener('click',()=>{
+  if(links.classList.contains('open')){
+    closeMenu();
+  }else{
+    clearTimeout(menuCloseTimer);
+    nav.classList.add('menu-open');
+    links.classList.add('open');
+  }
+});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
 // Scroll reveal
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
