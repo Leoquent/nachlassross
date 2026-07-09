@@ -36,7 +36,7 @@ h1,h2,h3{font-family:var(--font-serif);color:var(--navy);font-weight:600;line-he
 .section-lead{color:var(--muted);font-size:1.08rem;max-width:640px}
 
 /* ---------- Nav ---------- */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(251,252,253,0);transition:background .35s,box-shadow .35s;padding:18px 0}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(251,252,253,0);transition:background .35s,box-shadow .35s;padding:18px 0}
 nav.scrolled{background:rgba(251,252,253,.94);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line);padding:12px 0}
 .nav-inner{display:flex;align-items:center;justify-content:space-between}
 .logo{font-family:var(--font-serif);font-size:1.25rem;color:var(--white);letter-spacing:.02em;transition:color .35s;position:relative;z-index:110;display:inline-flex;align-items:center;gap:12px}
@@ -214,7 +214,7 @@ footer .logo-text{height:44px;width:auto;filter:brightness(0) invert(1)}
   nav .logo-text{height:36px;position:absolute;left:50%;transform:translateX(-50%)}
   section{padding:64px 0}
   .values-grid,.services .grid,.addons-grid,.steps{grid-template-columns:1fr}
-  .nav-links{position:fixed;inset:0;background:var(--navy);flex-direction:column;justify-content:center;gap:28px;transform:translateX(100%);transition:transform .4s cubic-bezier(.4,0,.2,1);z-index:150}
+  .nav-links{position:fixed;inset:0;background:var(--navy);flex-direction:column;justify-content:center;gap:28px;transform:translateX(100%);transition:transform .4s cubic-bezier(.4,0,.2,1);z-index:1}
   .nav-links.open{transform:none}
   .nav-links a{color:var(--white)!important;font-size:1.2rem}
   .burger{display:block}
@@ -237,7 +237,7 @@ footer .logo-text{height:44px;width:auto;filter:brightness(0) invert(1)}
   .trustbar svg{margin-top:3px;flex-shrink:0}
   footer .logo-icon{height:32px}
   footer .logo-text{height:28px}
-  nav.menu-open{background:var(--navy)!important;backdrop-filter:none!important;box-shadow:none!important}
+  nav.menu-open{height:100vh!important;background:var(--navy)!important;backdrop-filter:none!important;box-shadow:none!important}
 }
 </style>
 </head>
@@ -251,15 +251,15 @@ footer .logo-text{height:44px;width:auto;filter:brightness(0) invert(1)}
       <img src="logo_text.png" alt="Gebrüder Ross" class="logo-text">
     </a>
     <button class="burger" id="burger" aria-label="Menü"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#ablauf">Ablauf</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#mehrwert">Ihr Mehrwert</a>
+      <a href="#kontakt" class="nav-cta">Kontakt aufnehmen</a>
+    </div>
   </div>
 </nav>
-<div class="nav-links" id="navLinks">
-  <a href="#ueber-uns">Über uns</a>
-  <a href="#ablauf">Ablauf</a>
-  <a href="#leistungen">Leistungen</a>
-  <a href="#mehrwert">Ihr Mehrwert</a>
-  <a href="#kontakt" class="nav-cta">Kontakt aufnehmen</a>
-</div>
 
 <!-- HERO -->
 <header class="hero" id="top">
