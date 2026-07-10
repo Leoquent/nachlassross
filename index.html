@@ -809,32 +809,23 @@ footer .logo-text{height:44px;width:auto;filter:brightness(0) invert(1)}
       <div class="dp-counter">08 / 09</div>
     </section>
 
-    <!-- Slide 9: CTA -->
+    <!-- Slide 9: Closing Statement -->
     <section class="dp-slide dk" data-dp="9">
       <div class="dp-brand dp-rev"><img src="logo_icon.png" alt="" class="icon"><span class="div"></span><img src="logo_text.png" alt="Gebrüder Ross" class="word"></div>
-      <div class="dp-slide-inner">
-        <div class="dp-split-eq">
-          <div>
-            <div class="dp-eyebrow dp-rev">Nächster Schritt</div>
-            <h2 class="dp-rev" style="margin-top:8px;color:var(--white)">Lassen Sie uns<br>ein Mandat <em style="color:var(--gold);font-style:italic">gemeinsam</em> starten.</h2>
-            <p class="lead dp-rev" style="margin-top:14px;color:rgba(255,255,255,.78)">Wir schlagen ein unverbindliches Kennenlerngespräch vor — 30 Minuten, gern am Telefon oder direkt vor Ort am Objekt. Sie bringen ein aktuelles Mandat mit, wir zeigen Ihnen konkret, wie wir es übernehmen würden.</p>
-            <div class="dp-title-meta dp-rev">
-              <div class="m"><b style="color:var(--gold)">Gebrüder Ross</b>Simon Bartosch &amp; Raphael Uhland</div>
-              <div class="m"><b style="color:var(--gold)">Standort</b>Kriegsbergstraße 30 · 70174 Stuttgart</div>
-            </div>
-          </div>
-          <div class="dp-rev">
-            <div class="dp-cta">
-              <h3>Termin anfragen</h3>
-              <p>Wir melden uns innerhalb eines Werktages mit Terminvorschlägen.</p>
-              <form onsubmit="event.preventDefault();this.innerHTML='<p style=&quot;padding:36px 0;text-align:center;font-size:1rem;color:var(--navy)&quot;>Vielen Dank, Herr Moll.<br>Wir melden uns zeitnah mit Terminvorschlägen bei Ihnen.</p>';">
-                <div class="dp-field"><label>Name</label><input type="text" required placeholder="Ihr Name"></div>
-                <div class="dp-field"><label>Telefon oder E-Mail</label><input type="text" required placeholder="Kontakt für Rückmeldung"></div>
-                <div class="dp-field"><label>Wunschtermin (optional)</label><input type="text" placeholder="z. B. nächste Woche Vormittag"></div>
-                <button type="submit" class="dp-btn dp-btn-navy">Anfrage senden</button>
-              </form>
-            </div>
-          </div>
+      <div class="dp-slide-inner" style="text-align:center;align-items:center;justify-content:center">
+        <div class="dp-pre dp-rev">Auf den Punkt</div>
+        <h1 class="dp-rev" style="color:var(--white);font-size:clamp(2.6rem,5.6vw,4.8rem);line-height:1.1;max-width:1000px;margin:18px auto 24px">Ihr <em style="color:var(--gold);font-style:italic">rechtliches</em> Mandat.<br>Unser <em style="color:var(--gold);font-style:italic">operativer</em> Arm.</h1>
+        <p class="lead dp-rev" style="color:rgba(255,255,255,.82);max-width:720px;margin:0 auto 40px">Sie behalten den Kopf frei für Ihre Kernaufgaben — wir tragen die operative Last vor Ort. Verlässlich, dokumentiert, gerichtsfest. Aus einer Hand.</p>
+        <div class="dp-rev" style="display:flex;gap:14px;align-items:center;justify-content:center;margin-top:8px;flex-wrap:wrap">
+          <span style="display:inline-flex;align-items:center;gap:10px;color:rgba(255,255,255,.7);font-size:.9rem;letter-spacing:.04em"><svg viewBox="0 0 24 24" style="width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:2"><path d="M5 13l4 4L19 7"/></svg>Großraum Stuttgart</span>
+          <span style="width:1px;height:18px;background:rgba(255,255,255,.18)"></span>
+          <span style="display:inline-flex;align-items:center;gap:10px;color:rgba(255,255,255,.7);font-size:.9rem;letter-spacing:.04em"><svg viewBox="0 0 24 24" style="width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:2"><path d="M5 13l4 4L19 7"/></svg>Start in 48 Stunden</span>
+          <span style="width:1px;height:18px;background:rgba(255,255,255,.18)"></span>
+          <span style="display:inline-flex;align-items:center;gap:10px;color:rgba(255,255,255,.7);font-size:.9rem;letter-spacing:.04em"><svg viewBox="0 0 24 24" style="width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:2"><path d="M5 13l4 4L19 7"/></svg>Simon &amp; Raphael Uhland (gebürtig Bartosch)</span>
+        </div>
+        <div class="dp-rev" style="margin-top:48px;padding-top:32px;border-top:1px solid rgba(255,255,255,.14);max-width:520px;margin-left:auto;margin-right:auto">
+          <p style="font-family:var(--font-serif);font-style:italic;color:rgba(255,255,255,.55);font-size:.95rem;margin:0 0 6px">Kontakt für ein unverbindliches Erstgespräch</p>
+          <p style="font-family:var(--font-serif);color:var(--white);font-size:1.4rem;margin:0;letter-spacing:.02em">Gebrüder Ross · Kriegsbergstraße 30 · 70174 Stuttgart</p>
         </div>
       </div>
       <div class="dp-counter">09 / 09</div>
@@ -873,7 +864,7 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
 // ===== Presentation Mode =====
 (function(){
-  const LABELS={1:'01 — Hook',2:'02 — Kontext',3:'03 — Problem',4:'04 — Partner',5:'05 — Ablauf',6:'06 — Leistungen',7:'07 — Differenziatoren',8:'08 — Einwände',9:'09 — Nächster Schritt'};
+  const LABELS={1:'01 — Hook',2:'02 — Kontext',3:'03 — Problem',4:'04 — Partner',5:'05 — Ablauf',6:'06 — Leistungen',7:'07 — Differenziatoren',8:'08 — Einwände',9:'09 — Abschluss'};
   const overlay=document.getElementById('dpOverlay');
   const slides=overlay.querySelectorAll('.dp-slide');
   const dots=overlay.querySelectorAll('.dp-dot');
