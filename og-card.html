@@ -20,7 +20,7 @@ body {
 .og-canvas {
   width: 1200px;
   height: 630px;
-  background: radial-gradient(circle at 50% 38%, #183352 0%, #0e1f33 55%, #07101a 100%);
+  background: radial-gradient(circle at 50% 40%, #1a3656 0%, #0e1f33 55%, #060e18 100%);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -28,7 +28,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 50px 80px;
+  padding: 40px 80px;
 }
 
 /* Subtle background grid & ambient light */
@@ -36,7 +36,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(185, 152, 90, 0.1) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(185, 152, 90, 0.12) 1px, transparent 1px);
   background-size: 36px 36px;
   opacity: 0.6;
   pointer-events: none;
@@ -45,10 +45,10 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -55%);
-  width: 650px;
-  height: 450px;
-  background: radial-gradient(circle, rgba(185, 152, 90, 0.2) 0%, rgba(22, 48, 77, 0) 70%);
+  transform: translate(-50%, -50%);
+  width: 750px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(185, 152, 90, 0.22) 0%, rgba(22, 48, 77, 0) 70%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -57,7 +57,7 @@ body {
 .card-frame {
   position: absolute;
   inset: 24px;
-  border: 1px solid rgba(185, 152, 90, 0.25);
+  border: 1px solid rgba(185, 152, 90, 0.3);
   border-radius: 16px;
   pointer-events: none;
 }
@@ -65,7 +65,7 @@ body {
   content: "";
   position: absolute;
   inset: 6px;
-  border: 1px solid rgba(185, 152, 90, 0.1);
+  border: 1px solid rgba(185, 152, 90, 0.12);
   border-radius: 10px;
 }
 
@@ -76,63 +76,55 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 960px;
+  max-width: 980px;
 }
 
-/* Logo */
+/* Official Logo Icon */
 .logo-wrap {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   position: relative;
 }
 .logo-wrap img {
-  height: 160px;
+  height: 145px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 35px rgba(185, 152, 90, 0.35));
+  filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.7)) drop-shadow(0 0 35px rgba(185, 152, 90, 0.4));
 }
 
-/* Brand Name */
-.brand-name {
-  font-size: 32px;
-  font-weight: 800;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin-bottom: 12px;
-  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+/* Official Wordmark Text (rendered in white & gold) */
+.logo-text-wrap {
+  margin-bottom: 24px;
+  max-width: 540px;
+}
+.logo-text-wrap img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.6));
 }
 
-/* Divider */
-.divider {
-  width: 64px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #b9985a, transparent);
-  margin-bottom: 16px;
-}
-
-/* Claim / Headline */
+/* Core Headline */
 .claim {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 58px;
+  font-size: 54px;
   line-height: 1.15;
   font-weight: 700;
   font-style: italic;
   color: #dfc58e;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   text-shadow: 0 4px 24px rgba(0, 0, 0, 0.8), 0 0 40px rgba(185, 152, 90, 0.25);
   letter-spacing: -0.01em;
 }
 
 /* Sub-location / Tagline */
 .sub-tag {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.8);
-  padding: 8px 22px;
-  background: rgba(14, 31, 51, 0.6);
-  border: 1px solid rgba(185, 152, 90, 0.3);
+  color: rgba(255, 255, 255, 0.88);
+  padding: 8px 24px;
+  background: rgba(14, 31, 51, 0.65);
+  border: 1px solid rgba(185, 152, 90, 0.35);
   border-radius: 30px;
   backdrop-filter: blur(8px);
 }
@@ -145,24 +137,54 @@ body {
   <div class="ambient-glow"></div>
 
   <div class="content-stack">
-    <!-- Official Logo Icon -->
+    <!-- Official Logo Icon (Horse + GR) -->
     <div class="logo-wrap">
       <img src="logo_icon.png" alt="Gebrüder Ross Signet">
     </div>
 
-    <!-- Brand Name -->
-    <div class="brand-name">Gebrüder Ross</div>
-
-    <!-- Gold Divider -->
-    <div class="divider"></div>
+    <!-- Official Brand Wordmark -->
+    <div class="logo-text-wrap">
+      <img id="brand-logo-text" src="logo_text.png" alt="Gebrüder Ross – Nachlassservice">
+    </div>
 
     <!-- Core Headline -->
     <div class="claim">Ihr verlängerter Arm vor Ort.</div>
 
     <!-- Sub Tag -->
-    <div class="sub-tag">Nachlassservice · Großraum Stuttgart</div>
+    <div class="sub-tag">Großraum Stuttgart</div>
   </div>
 </div>
+
+<script>
+// Automatically convert navy letters in logo_text.png to white on dark background while keeping gold lines intact
+window.addEventListener('DOMContentLoaded', () => {
+  const img = new Image();
+  img.crossOrigin = 'anonymous';
+  img.src = 'logo_text.png';
+  img.onload = () => {
+    const canvas = document.createElement('canvas');
+    canvas.width = img.width;
+    canvas.height = img.height;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(img, 0, 0);
+    const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const d = imgData.data;
+    for (let i = 0; i < d.length; i += 4) {
+      const r = d[i], g = d[i+1], b = d[i+2], a = d[i+3];
+      if (a > 15) {
+        // If it's navy / dark blue (b > r and r is low)
+        if (b > r && r < 90 && g < 110) {
+          d[i] = 255;
+          d[i+1] = 255;
+          d[i+2] = 255;
+        }
+      }
+    }
+    ctx.putImageData(imgData, 0, 0);
+    document.getElementById('brand-logo-text').src = canvas.toDataURL();
+  };
+});
+</script>
 
 </body>
 </html>
